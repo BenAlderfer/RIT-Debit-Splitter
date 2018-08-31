@@ -85,7 +85,7 @@ public class SettingsActivity extends AppCompatActivity {
             switch (key) {
                 case "saveBox":
                     setSaveBoxSummary();
-                    break;                                       //Save box
+                    break;  //Save box
             }
         }
 
@@ -93,7 +93,7 @@ public class SettingsActivity extends AppCompatActivity {
          * Sets the summary for the save box
          */
         protected void setSaveBoxSummary() {
-            if (isAdded()) {                                                                       //must check if the fragment is added to the activity
+            if (isAdded()) {    //must check if the fragment is added to the activity
                 Preference p = findPreference("saveBox");
                 if (p != null) {
                     if (shared.getBoolean("saveBox", false)) {

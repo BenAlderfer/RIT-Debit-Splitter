@@ -1,11 +1,12 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.feature'
 
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.2"
 
+    baseFeature true
+
     defaultConfig {
-        applicationId "com.alderferstudios.ritdebitsplitter"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 51
@@ -27,6 +28,8 @@ ext {
 }
 
 dependencies {
+    application project(":apk_module")
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
 

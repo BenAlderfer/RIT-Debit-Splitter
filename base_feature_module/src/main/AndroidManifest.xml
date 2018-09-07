@@ -19,6 +19,9 @@
             android:name="com.alderferstudios.ritdebitsplitter.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/OrangeTheme">
+            <meta-data
+                android:name="default-url"
+                android:value="https://ritdiningplanner.xyz" />
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -30,11 +33,9 @@
 
                 <data
                     android:host="ritdiningplanner.xyz"
-                    android:pathPrefix="/app"
                     android:scheme="http" />
                 <data
                     android:host="ritdiningplanner.xyz"
-                    android:pathPrefix="/app"
                     android:scheme="https" />
             </intent-filter>
         </activity>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.alderferstudios.ritdebitsplitter">
+    package="com.alderferstudios.ritdebitsplitter.base">
 
     <!-- Some Chromebooks don't support touch. Although not essential,
          it's a good idea to explicitly include this declaration. -->
@@ -16,42 +16,47 @@
         android:supportsRtl="true"
         android:theme="@style/OrangeTheme">
         <activity
-            android:name="com.alderferstudios.ritdebitsplitter.MainActivity"
+            android:name="com.alderferstudios.ritdebitsplitter.base.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/OrangeTheme">
             <meta-data
                 android:name="default-url"
                 android:value="https://ritdiningplanner.xyz" />
+
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <data
+                    android:scheme="http"
+                    android:host="ritdiningplanner.xyz" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="ritdiningplanner.xyz"
-                    android:scheme="http" />
-                <data
-                    android:host="ritdiningplanner.xyz"
-                    android:scheme="https" />
+                    android:scheme="https"
+                    android:host="ritdiningplanner.xyz" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.alderferstudios.ritdebitsplitter.CalendarDialog"
+            android:name="com.alderferstudios.ritdebitsplitter.base.CalendarDialog"
             android:theme="@style/OrangeLightPopUp" />
         <activity
-            android:name="com.alderferstudios.ritdebitsplitter.SettingsActivity"
+            android:name="com.alderferstudios.ritdebitsplitter.base.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/OrangeTheme" />
         <activity
-            android:name="com.alderferstudios.ritdebitsplitter.HelpActivity"
+            android:name="com.alderferstudios.ritdebitsplitter.base.HelpActivity"
             android:label="@string/title_activity_help"
             android:theme="@style/OrangeTheme" />
         <activity
-            android:name="com.alderferstudios.ritdebitsplitter.AboutActivity"
+            android:name="com.alderferstudios.ritdebitsplitter.base.AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@style/OrangeTheme" />
     </application>

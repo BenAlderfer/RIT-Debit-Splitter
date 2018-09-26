@@ -1,5 +1,15 @@
 apply plugin: 'com.android.instantapp'
 
+android {
+    flavorDimensions "experience"
+    productFlavors {
+        instant_module {
+        }
+        apk_module {
+        }
+    }
+}
+
 dependencies {
     implementation project(':base_feature_module')
 }

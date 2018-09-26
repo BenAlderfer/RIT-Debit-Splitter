@@ -17,6 +17,14 @@ android {
         }
     }
 
+    flavorDimensions "experience"
+    productFlavors {
+        instant_module {
+        }
+        apk_module {
+        }
+    }
+
     // return void removes the lint error: Not all execution paths return a value.
     return void
 }

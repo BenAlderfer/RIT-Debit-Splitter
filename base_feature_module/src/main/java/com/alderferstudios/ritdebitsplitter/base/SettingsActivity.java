@@ -18,10 +18,7 @@ import androidx.appcompat.widget.Toolbar;
  */
 public class SettingsActivity extends AppCompatActivity {
 
-    /**
-     * SharedPreferences objects for saving values
-     */
-    protected static SharedPreferences shared;
+    private static SharedPreferences shared;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +89,7 @@ public class SettingsActivity extends AppCompatActivity {
         /**
          * Sets the summary for the save box
          */
-        protected void setSaveBoxSummary() {
+        private void setSaveBoxSummary() {
             if (isAdded()) {    //must check if the fragment is added to the activity
                 Preference p = findPreference("saveBox");
                 if (p != null) {

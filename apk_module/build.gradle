@@ -7,8 +7,8 @@ android {
         applicationId "com.alderferstudios.ritdebitsplitter"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 54
-        versionName "2.4.2"
+        versionCode 55
+        versionName "2.4.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -21,6 +21,13 @@ android {
         }
     }
 
+    flavorDimensions "experience"
+    productFlavors {
+        instant_module {
+        }
+        apk_module {
+        }
+    }
 }
 
 dependencies {
